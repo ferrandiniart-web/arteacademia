@@ -1,163 +1,363 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desenhos de Personagens — Tutoriais de desenho passo a passo</title>
-<meta name="description" content="Aprenda a desenhar personagens fofos com tutoriais curtos, claros e passo a passo. Assista ao canal Desenhos de Personagens no YouTube e baixe um guia gratuito de desenho kawaii.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#FFFBF7;--ink:#28222D;--muted:#655E6B;--purple:#6540A4;--purple2:#503184;
-  --lav:#EEE6FA;--pink:#FFE5EC;--mint:#DDF4E8;--blue:#DDEEFF;--line:#EDE5DD;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-.wrap{width:min(1040px,calc(100% - 36px));margin:auto}
-header{padding:24px 0}.top{display:flex;justify-content:space-between;gap:20px;align-items:center}
-.brand,h1,h2,h3,.btn{font-family:'Fredoka',sans-serif}.brand{font-size:1.16rem;font-weight:700}
-.note{font-size:.9rem;color:var(--muted)}
-.hero{padding:52px 0 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.tag{display:inline-block;background:var(--lav);color:var(--purple2);padding:7px 12px;border-radius:999px;
-font-size:.78rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:18px}
-h1{font-size:clamp(2.35rem,6vw,4.55rem);line-height:1.08;letter-spacing:-.04em;margin-bottom:18px}
-.accent{color:var(--purple)}.lead{font-size:1.12rem;color:var(--muted);max-width:600px;margin-bottom:27px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;justify-content:center;align-items:center;
-padding:14px 22px;border-radius:15px;text-decoration:none;font-weight:600;transition:.15s}
-.btn:hover{transform:translateY(-2px)}.primary{background:var(--purple);color:white;box-shadow:0 7px 0 var(--purple2)}
-.secondary{background:white;color:var(--purple2);border:2px solid var(--lav)}
-.micro{font-size:.9rem;color:#8A8390;margin-top:15px}
-.art{background:white;border-radius:32px;padding:25px;box-shadow:0 18px 48px rgba(58,39,78,.10);min-height:360px;
-display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.art:before,.art:after{content:"";position:absolute;border-radius:50%}
-.art:before{width:150px;height:150px;background:var(--pink);top:-50px;right:-35px}
-.art:after{width:130px;height:130px;background:var(--mint);bottom:-45px;left:-35px}
-svg{max-width:100%;height:auto}.section{padding:68px 0;border-top:1px solid var(--line)}
-.heading{text-align:center;max-width:720px;margin:0 auto 34px}.heading h2{font-size:clamp(1.8rem,4vw,2.55rem);margin-bottom:10px}
-.heading p,.card p,.pdf p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:25px}
-.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px;font-weight:800}
-.card:nth-child(1) .icon{background:var(--blue)}.card:nth-child(2) .icon{background:var(--pink)}.card:nth-child(3) .icon{background:var(--mint)}
-.card h3{font-size:1.12rem;margin-bottom:6px}.pdf{display:grid;grid-template-columns:.82fr 1.18fr;gap:40px;align-items:center;
-background:linear-gradient(135deg,#F1E9FF,#FFF1F5);border-radius:30px;padding:40px}
-.pdf h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:10px}.pdf p{margin-bottom:22px}.center{display:flex;justify-content:center}
-.transition{text-align:center;color:var(--muted);font-size:.93rem;margin:44px auto 0;max-width:700px}.transition strong{color:var(--ink)}
-footer{text-align:center;color:#99919C;font-size:.84rem;padding:34px 0 46px}
-@media(max-width:780px){.hero{grid-template-columns:1fr;gap:32px}.cards{grid-template-columns:1fr}.pdf{grid-template-columns:1fr;text-align:center}
-.top{align-items:flex-start;flex-direction:column;gap:3px}.art{min-height:290px}}
-@media(max-width:500px){.actions{display:grid}.btn{width:100%}.hero{padding-top:30px}.section{padding:52px 0}.pdf{padding:30px 20px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desenhos de Personagens — Tutoriais de desenho passo a passo</title>
+  <meta name="description" content="Aprenda a desenhar personagens fofos com tutoriais curtos, claros e passo a passo. Escolha o canal em português ou inglês e baixe um guia gratuito de desenho kawaii.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fbfaf8;
+      --surface:#ffffff;
+      --ink:#25222a;
+      --muted:#6d6872;
+      --purple:#6540a4;
+      --purple-dark:#503184;
+      --purple-soft:#f1ebfb;
+      --pink-soft:#fff0f4;
+      --line:#e9e4de;
+      --shadow:0 16px 40px rgba(47,37,58,.08);
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      min-height:100vh;
+      font-family:'Nunito Sans',sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(241,235,251,.8), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(255,240,244,.75), transparent 24%),
+        var(--bg);
+      line-height:1.55;
+    }
+
+    .wrap{
+      width:min(920px, calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    header{
+      padding:28px 0 12px;
+    }
+
+    .brand{
+      font-family:'Fredoka',sans-serif;
+      font-weight:700;
+      font-size:1.08rem;
+      letter-spacing:-.01em;
+    }
+
+    main{
+      padding:42px 0 64px;
+    }
+
+    .hero{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 38px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      color:var(--purple);
+      margin-bottom:14px;
+    }
+
+    h1,h2,h3,.button{
+      font-family:'Fredoka',sans-serif;
+    }
+
+    h1{
+      font-size:clamp(2.35rem, 6vw, 4rem);
+      line-height:1.07;
+      letter-spacing:-.04em;
+      margin-bottom:16px;
+    }
+
+    .hero p{
+      max-width:650px;
+      margin:0 auto;
+      font-size:1.08rem;
+      color:var(--muted);
+    }
+
+    .channels{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin:0 auto 34px;
+      max-width:760px;
+    }
+
+    .channel-card{
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:26px 24px 24px;
+      box-shadow:var(--shadow);
+      text-align:left;
+    }
+
+    .channel-label{
+      display:inline-block;
+      padding:5px 9px;
+      border-radius:999px;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .pt .channel-label{
+      background:var(--purple-soft);
+      color:var(--purple-dark);
+    }
+
+    .en .channel-label{
+      background:var(--pink-soft);
+      color:#9a4761;
+    }
+
+    .channel-card h2{
+      font-size:1.45rem;
+      margin-bottom:8px;
+    }
+
+    .channel-card p{
+      color:var(--muted);
+      font-size:.96rem;
+      margin-bottom:20px;
+      min-height:48px;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:auto;
+      min-width:170px;
+      padding:11px 18px;
+      border-radius:12px;
+      font-size:.96rem;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+    .button:hover{
+      transform:translateY(-2px);
+    }
+
+    .button-primary{
+      background:var(--purple);
+      color:#fff;
+      box-shadow:0 5px 0 var(--purple-dark);
+    }
+
+    .button-primary:active{
+      transform:translateY(2px);
+      box-shadow:0 2px 0 var(--purple-dark);
+    }
+
+    .button-outline{
+      background:#fff;
+      color:var(--purple-dark);
+      border:1.5px solid #d9cbee;
+    }
+
+    .pdf{
+      max-width:760px;
+      margin:0 auto;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.72);
+      border-radius:20px;
+      padding:24px 26px;
+      display:flex;
+      gap:22px;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .pdf-copy{
+      max-width:560px;
+    }
+
+    .pdf h3{
+      font-size:1.18rem;
+      margin-bottom:5px;
+    }
+
+    .pdf p{
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    .pdf-link{
+      flex:0 0 auto;
+      font-weight:800;
+      color:var(--purple);
+      text-decoration:none;
+      white-space:nowrap;
+      border-bottom:2px solid #d8cbed;
+      padding-bottom:2px;
+    }
+
+    .pdf-link:hover{
+      border-color:var(--purple);
+    }
+
+    footer{
+      padding:28px 0 34px;
+      border-top:1px solid var(--line);
+      text-align:center;
+      color:#98929b;
+      font-size:.82rem;
+    }
+
+    @media(max-width:720px){
+      header{
+        text-align:center;
+      }
+
+      main{
+        padding-top:28px;
+      }
+
+      .channels{
+        grid-template-columns:1fr;
+        max-width:520px;
+      }
+
+      .channel-card{
+        text-align:center;
+      }
+
+      .channel-card p{
+        min-height:auto;
+      }
+
+      .pdf{
+        max-width:520px;
+        flex-direction:column;
+        text-align:center;
+        padding:22px;
+      }
+    }
+
+    @media(max-width:480px){
+      .wrap{
+        width:min(100% - 28px, 920px);
+      }
+
+      h1{
+        font-size:2.35rem;
+      }
+
+      .hero p{
+        font-size:1rem;
+      }
+
+      .channel-card{
+        padding:22px 18px 20px;
+        border-radius:18px;
+      }
+
+      .button{
+        min-width:0;
+        padding:10px 16px;
+      }
+
+      .pdf{
+        border-radius:18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="wrap top">
-    <div class="brand">Desenhos de Personagens</div>
-    <div class="note">O antigo Arte Academia agora tem um novo foco.</div>
-  </div>
-</header>
-
-<main>
-<section class="wrap hero">
-  <div>
-    <span class="tag">Tutoriais de desenho em português</span>
-    <h1>Aprenda a desenhar <span class="accent">personagens fofos</span> passo a passo.</h1>
-    <p class="lead">Tutoriais curtos e claros com formas simples, proporções, linhas de referência e alinhamentos para ajudar você a entender como cada desenho é construído.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://www.youtube.com/channel/UCyQ6Sc3clci1Dis7x5BcpEQ" target="_blank" rel="noopener noreferrer">Assistir no YouTube →</a>
-      <a class="btn secondary" href="https://arte-academia.kit.com/pt" target="_blank" rel="noopener noreferrer">Baixar guia grátis</a>
+  <header>
+    <div class="wrap">
+      <div class="brand">Desenhos de Personagens</div>
     </div>
-    <p class="micro">Sanrio • personagens kawaii autorais • novos tutoriais regularmente</p>
-  </div>
+  </header>
 
-  <div class="art">
-    <svg viewBox="0 0 560 370" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Esboço e personagem finalizado">
-      <g opacity=".42" stroke="#756E79" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <ellipse cx="150" cy="145" rx="88" ry="72"/>
-        <line x1="62" y1="145" x2="238" y2="145" stroke-dasharray="7 8"/>
-        <line x1="150" y1="73" x2="150" y2="217" stroke-dasharray="7 8"/>
-        <path d="M84 103C57 72 47 91 58 122"/>
-        <path d="M216 103C243 72 253 91 242 122"/>
-        <ellipse cx="120" cy="143" rx="8" ry="12"/>
-        <ellipse cx="180" cy="143" rx="8" ry="12"/>
-        <path d="M141 170Q150 178 159 170"/>
-        <ellipse cx="150" cy="268" rx="60" ry="48"/>
-      </g>
-      <g stroke="#6540A4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M257 185H315"/><path d="M299 171L315 185L299 199"/>
-      </g>
-      <g stroke="#28222D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <ellipse cx="420" cy="145" rx="90" ry="74" fill="#fff"/>
-        <path d="M354 102C328 71 314 89 324 123" fill="#fff"/>
-        <path d="M486 102C512 71 526 89 516 123" fill="#fff"/>
-        <ellipse cx="390" cy="141" rx="9" ry="14" fill="#28222D"/>
-        <ellipse cx="450" cy="141" rx="9" ry="14" fill="#28222D"/>
-        <path d="M412 169Q420 177 428 169"/>
-        <ellipse cx="420" cy="265" rx="62" ry="49" fill="#fff"/>
-        <path d="M382 242Q359 260 366 292" fill="#fff"/>
-        <path d="M458 242Q481 260 474 292" fill="#fff"/>
-        <path d="M385 193Q420 214 455 193" fill="#DDF4E8"/>
-      </g>
-      <circle cx="374" cy="168" r="9" fill="#FFE5EC"/>
-      <circle cx="466" cy="168" r="9" fill="#FFE5EC"/>
-      <text x="78" y="340" fill="#756E79" font-family="Nunito Sans" font-size="17">esboço + guias</text>
-      <text x="366" y="340" fill="#6540A4" font-family="Nunito Sans" font-size="17" font-weight="700">desenho final</text>
-    </svg>
-  </div>
-</section>
+  <main>
+    <div class="wrap">
 
-<section class="section">
-  <div class="wrap">
-    <div class="heading">
-      <h2>Entenda como o desenho é construído.</h2>
-      <p>Em vez de apenas ver o desenho acontecer, acompanhe decisões simples que ajudam a organizar formas, proporções, expressões e poses.</p>
+      <section class="hero">
+        <span class="eyebrow">Tutoriais de desenho</span>
+        <h1>Aprenda a desenhar personagens fofos passo a passo.</h1>
+        <p>
+          Tutoriais curtos e claros com formas simples, proporções, linhas de referência
+          e alinhamentos para ajudar você a entender como cada desenho é construído.
+        </p>
+      </section>
+
+      <section class="channels" aria-label="Escolha seu canal">
+        <article class="channel-card pt">
+          <span class="channel-label">Português</span>
+          <h2>Desenhos de Personagens</h2>
+          <p>Assista aos tutoriais em português e acompanhe novos desenhos no YouTube.</p>
+          <a class="button button-primary"
+             href="https://www.youtube.com/channel/UCyQ6Sc3clci1Dis7x5BcpEQ"
+             target="_blank"
+             rel="noopener noreferrer">
+            Ir para o canal →
+          </a>
+        </article>
+
+        <article class="channel-card en">
+          <span class="channel-label">English</span>
+          <h2>Cute Drawing Lessons</h2>
+          <p>Prefer English? Watch the same drawing lessons on the English channel.</p>
+          <a class="button button-outline"
+             href="https://www.youtube.com/@CuteDrawingLessons"
+             target="_blank"
+             rel="noopener noreferrer">
+            Visit the channel →
+          </a>
+        </article>
+      </section>
+
+      <section class="pdf">
+        <div class="pdf-copy">
+          <h3>Guia gratuito de desenho kawaii</h3>
+          <p>Pratique formas, expressões e poses e comece a criar seu próprio personagem no papel ou no tablet.</p>
+        </div>
+
+        <a class="pdf-link"
+           href="https://arte-academia.kit.com/pt"
+           target="_blank"
+           rel="noopener noreferrer">
+          Baixar PDF →
+        </a>
+      </section>
+
     </div>
-    <div class="cards">
-      <div class="card"><div class="icon">◯</div><h3>Formas simples</h3><p>Comece pela estrutura básica antes de acrescentar os detalhes do personagem.</p></div>
-      <div class="card"><div class="icon">＋</div><h3>Guias e alinhamentos</h3><p>Use referências visuais para posicionar olhos, rosto, corpo e outros elementos com mais clareza.</p></div>
-      <div class="card"><div class="icon">✦</div><h3>Personagens e ideias</h3><p>Desenhe personagens Sanrio e explore também personagens kawaii autorais.</p></div>
-    </div>
-  </div>
-</section>
+  </main>
 
-<section class="section">
-  <div class="wrap">
-    <div class="pdf">
-      <div class="center">
-        <svg width="235" viewBox="0 0 235 245" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="34" y="14" width="166" height="216" rx="16" fill="white" stroke="#D8C8EF" stroke-width="3"/>
-          <rect x="60" y="42" width="115" height="12" rx="6" fill="#6540A4"/>
-          <rect x="74" y="64" width="87" height="7" rx="3.5" fill="#D8C8EF"/>
-          <circle cx="88" cy="115" r="28" fill="#FFE5EC" stroke="#28222D" stroke-width="2.5"/>
-          <path d="M67 96L58 81L78 90M109 96L118 81L98 90" stroke="#28222D" stroke-width="2.5"/>
-          <circle cx="79" cy="114" r="3.5" fill="#28222D"/><circle cx="97" cy="114" r="3.5" fill="#28222D"/>
-          <path d="M83 125Q88 130 93 125" stroke="#28222D" stroke-width="2.5"/>
-          <circle cx="153" cy="115" r="28" fill="#DDF4E8" stroke="#28222D" stroke-width="2.5"/>
-          <ellipse cx="136" cy="95" rx="10" ry="19" fill="#DDF4E8" stroke="#28222D" stroke-width="2.5"/>
-          <ellipse cx="170" cy="95" rx="10" ry="19" fill="#DDF4E8" stroke="#28222D" stroke-width="2.5"/>
-          <circle cx="144" cy="114" r="3.5" fill="#28222D"/><circle cx="162" cy="114" r="3.5" fill="#28222D"/>
-          <path d="M148 125Q153 130 158 125" stroke="#28222D" stroke-width="2.5"/>
-          <rect x="65" y="159" width="107" height="8" rx="4" fill="#EDE5DD"/>
-          <rect x="77" y="176" width="83" height="8" rx="4" fill="#EDE5DD"/>
-          <rect x="90" y="193" width="58" height="8" rx="4" fill="#EDE5DD"/>
-        </svg>
-      </div>
-      <div>
-        <span class="tag">PDF gratuito</span>
-        <h2>Comece a criar seu próprio personagem kawaii.</h2>
-        <p>Baixe o guia gratuito em português e pratique formas, expressões e poses no papel ou no tablet.</p>
-        <a class="btn primary" href="https://arte-academia.kit.com/pt" target="_blank" rel="noopener noreferrer">Baixar guia grátis →</a>
-      </div>
-    </div>
-
-    <p class="transition"><strong>Arte Academia agora é Desenhos de Personagens.</strong> O site continua neste endereço, mas os novos tutoriais estão no YouTube.</p>
-  </div>
-</section>
-</main>
-
-<footer><div class="wrap">Emerson Ferrandini © 2027 · arteacademia.com.br</div></footer>
+  <footer>
+    © 2026 Arte Academia
+  </footer>
 
 </body>
 </html>
