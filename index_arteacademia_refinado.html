@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desenhos de Personagens — Tutoriais de desenho passo a passo</title>
+  <meta name="description" content="Aprenda a desenhar personagens fofos com tutoriais curtos, claros e passo a passo. Escolha o canal em português ou inglês e baixe um guia gratuito de desenho kawaii.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fbfaf8;
+      --surface:#ffffff;
+      --ink:#25222a;
+      --muted:#6d6872;
+      --purple:#6540a4;
+      --purple-dark:#503184;
+      --purple-soft:#f1ebfb;
+      --pink-soft:#fff0f4;
+      --line:#e9e4de;
+      --shadow:0 16px 40px rgba(47,37,58,.08);
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      min-height:100vh;
+      font-family:'Nunito Sans',sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(241,235,251,.8), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(255,240,244,.75), transparent 24%),
+        var(--bg);
+      line-height:1.55;
+    }
+
+    .wrap{
+      width:min(920px, calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    header{
+      padding:28px 0 12px;
+    }
+
+    .brand{
+      font-family:'Fredoka',sans-serif;
+      font-weight:700;
+      font-size:1.08rem;
+      letter-spacing:-.01em;
+    }
+
+    main{
+      padding:42px 0 64px;
+    }
+
+    .hero{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 38px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      color:var(--purple);
+      margin-bottom:14px;
+    }
+
+    h1,h2,h3,.button{
+      font-family:'Fredoka',sans-serif;
+    }
+
+    h1{
+      font-size:clamp(2.35rem, 6vw, 4rem);
+      line-height:1.07;
+      letter-spacing:-.04em;
+      margin-bottom:16px;
+    }
+
+    .hero p{
+      max-width:650px;
+      margin:0 auto;
+      font-size:1.08rem;
+      color:var(--muted);
+    }
+
+    .channels{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin:0 auto 34px;
+      max-width:760px;
+    }
+
+    .channel-card{
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:26px 24px 24px;
+      box-shadow:var(--shadow);
+      text-align:left;
+    }
+
+    .channel-label{
+      display:inline-block;
+      padding:5px 9px;
+      border-radius:999px;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .pt .channel-label{
+      background:var(--purple-soft);
+      color:var(--purple-dark);
+    }
+
+    .en .channel-label{
+      background:var(--pink-soft);
+      color:#9a4761;
+    }
+
+    .channel-card h2{
+      font-size:1.45rem;
+      margin-bottom:8px;
+    }
+
+    .channel-card p{
+      color:var(--muted);
+      font-size:.96rem;
+      margin-bottom:20px;
+      min-height:48px;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:auto;
+      min-width:170px;
+      padding:11px 18px;
+      border-radius:12px;
+      font-size:.96rem;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+    .button:hover{
+      transform:translateY(-2px);
+    }
+
+    .button-primary{
+      background:var(--purple);
+      color:#fff;
+      box-shadow:0 5px 0 var(--purple-dark);
+    }
+
+    .button-primary:active{
+      transform:translateY(2px);
+      box-shadow:0 2px 0 var(--purple-dark);
+    }
+
+    .button-outline{
+      background:#fff;
+      color:var(--purple-dark);
+      border:1.5px solid #d9cbee;
+    }
+
+    .pdf{
+      max-width:760px;
+      margin:0 auto;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.72);
+      border-radius:20px;
+      padding:24px 26px;
+      display:flex;
+      gap:22px;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .pdf-copy{
+      max-width:560px;
+    }
+
+    .pdf h3{
+      font-size:1.18rem;
+      margin-bottom:5px;
+    }
+
+    .pdf p{
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    .pdf-link{
+      flex:0 0 auto;
+      font-weight:800;
+      color:var(--purple);
+      text-decoration:none;
+      white-space:nowrap;
+      border-bottom:2px solid #d8cbed;
+      padding-bottom:2px;
+    }
+
+    .pdf-link:hover{
+      border-color:var(--purple);
+    }
+
+    footer{
+      padding:28px 0 34px;
+      border-top:1px solid var(--line);
+      text-align:center;
+      color:#98929b;
+      font-size:.82rem;
+    }
+
+    @media(max-width:720px){
+      header{
+        text-align:center;
+      }
+
+      main{
+        padding-top:28px;
+      }
+
+      .channels{
+        grid-template-columns:1fr;
+        max-width:520px;
+      }
+
+      .channel-card{
+        text-align:center;
+      }
+
+      .channel-card p{
+        min-height:auto;
+      }
+
+      .pdf{
+        max-width:520px;
+        flex-direction:column;
+        text-align:center;
+        padding:22px;
+      }
+    }
+
+    @media(max-width:480px){
+      .wrap{
+        width:min(100% - 28px, 920px);
+      }
+
+      h1{
+        font-size:2.35rem;
+      }
+
+      .hero p{
+        font-size:1rem;
+      }
+
+      .channel-card{
+        padding:22px 18px 20px;
+        border-radius:18px;
+      }
+
+      .button{
+        min-width:0;
+        padding:10px 16px;
+      }
+
+      .pdf{
+        border-radius:18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap">
+      <div class="brand">Desenhos de Personagens</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section class="hero">
+        <span class="eyebrow">Tutoriais de desenho</span>
+        <h1>Aprenda a desenhar personagens fofos passo a passo.</h1>
+        <p>
+          Tutoriais curtos e claros com formas simples, proporções, linhas de referência
+          e alinhamentos para ajudar você a entender como cada desenho é construído.
+        </p>
+      </section>
+
+      <section class="channels" aria-label="Escolha seu canal">
+        <article class="channel-card pt">
+          <span class="channel-label">Português</span>
+          <h2>Desenhos de Personagens</h2>
+          <p>Assista aos tutoriais em português e acompanhe novos desenhos no YouTube.</p>
+          <a class="button button-primary"
+             href="https://www.youtube.com/channel/UCyQ6Sc3clci1Dis7x5BcpEQ"
+             target="_blank"
+             rel="noopener noreferrer">
+            Ir para o canal →
+          </a>
+        </article>
+
+        <article class="channel-card en">
+          <span class="channel-label">English</span>
+          <h2>Cute Drawing Lessons</h2>
+          <p>Prefer English? Watch the same drawing lessons on the English channel.</p>
+          <a class="button button-outline"
+             href="https://www.youtube.com/@CuteDrawingLessons"
+             target="_blank"
+             rel="noopener noreferrer">
+            Visit the channel →
+          </a>
+        </article>
+      </section>
+
+      <section class="pdf">
+        <div class="pdf-copy">
+          <h3>Guia gratuito de desenho kawaii</h3>
+          <p>Pratique formas, expressões e poses e comece a criar seu próprio personagem no papel ou no tablet.</p>
+        </div>
+
+        <a class="pdf-link"
+           href="https://arte-academia.kit.com/pt"
+           target="_blank"
+           rel="noopener noreferrer">
+          Baixar PDF →
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Arte Academia
+  </footer>
+
+</body>
+</html>
